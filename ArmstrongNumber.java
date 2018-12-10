@@ -3,7 +3,7 @@ public class ArmstrongNumber
 {
     public static void main(String args[])
     {
-        int temp=11,expressionSum = 0,number,reminder,count,length=0;
+        int temp=153,expressionSum = 0,number,reminder,count,length=0;
         number=temp;
         count=temp;
          while(count!=0)
