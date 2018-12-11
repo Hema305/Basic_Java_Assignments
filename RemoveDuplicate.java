@@ -4,13 +4,16 @@ class RemoveDuplicate
 	public static void main(String args[])
 	{
 		Scanner in=new Scanner(System.in);
+		System.out.println("enter the number of elements:");
 		int n=in.nextInt();
 		int a[]=new int[n];
+		System.out.println("enter the elements");
 		for(int i=0;i<a.length;i++)
 		{
 			a[i]=in.nextInt();
 		}
-		for(int i=0;i<a.length;i++)
+		
+		for(int i=0;i<a.length;i++)//sorting
 		{
 			int temp;
 			for(int j=i+1;j<a.length;j++)
