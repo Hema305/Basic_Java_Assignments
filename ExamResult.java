@@ -1,30 +1,31 @@
 import java.util.Scanner;
-public class ExamResult {
-    public static void main(String srgs[])
-    {
-        Scanner sc =new Scanner(System.in);
-        System.out.println("enter subject1 marks:");
-        int subject1=sc.nextInt();
-          System.out.println("enter subject2 marks:");
-        int subject2=sc.nextInt();
-          System.out.println("enter subject3 marks:");
-        int subject3=sc.nextInt();
-        int total=(subject1+subject2+subject3)/3;
-        int passmark=(subject1+subject2)/2,passmark2=(subject1+subject3)/2,passmark3=(subject2+subject3)/2;
-        
-        if(total>=60 )
-        {
-            System.out.println("passed");
-        }
-        else if(passmark>=60  || passmark2>=60 || passmark3>=60)
-        {
-            System.out.println("promoted");
-        }
-        
-        else
-        {
-            System.out.println("failed");
-        }
-        
-    }
+class ExamResult
+
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the marks of first subject : ");
+		float subject1 = sc.nextFloat();
+		System.out.println("Enter the marks of first subject : ");
+		float subject2 = sc.nextFloat();
+		System.out.println("Enter the marks of first subject : ");
+		float subject3 = sc.nextFloat();
+		if((subject1>60 && subject1<=100)&&(subject2>60 && subject1<=100)&&(subject3>60 && subject1<=100))
+		{
+			System.out.println("You are passed !!!");
+		}
+		else if(((subject1>60 && subject1<=100) && (subject2>60 && subject1<=100))||((subject2>60 && subject2<=100) && (subject3>60 && subject3<=100))||((subject3>60 && subject3<=100) && (subject1>60 && subject1<=100)))
+		{
+			System.out.println("You are promoted !!!");
+		}
+		else if(((subject1>60&& subject1<=100) && subject2<60 && subject3<60)||(subject1<60 && (subject2>60 && subject2<100) && subject3<60)||(subject1<60 && subject2<60 && (subject3>60 && subject3<100)))
+		{
+			System.out.println("Sorry !! you are failed");
+		}
+		if(subject1>100 || subject2 >100 ||subject3>100)
+		{
+			System.out.println("Maximum marks should be less than or equal to 100 ");
+		}
+	}
 }
